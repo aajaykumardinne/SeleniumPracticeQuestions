@@ -10,23 +10,19 @@ public class DWHandle {
 
 	public static void main(String[] args) {
 
-
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
-		
+
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		
-		
+
 		driver.get("https://testuserautomation.github.io/WebTable/");
-		
-		// second  method
-		driver.findElement(By.xpath("//td[contains(text(),'Will')]//preceding-sibling::td//input[@type ='checkbox']")).click();
-		
+
+		// second method
+		driver.findElement(By.xpath("//td[contains(text(),'Will')]//preceding-sibling::td//input[@type ='checkbox']"))
+				.click();
+
 		// first method
-		
-		
-		
 
 	}
 
